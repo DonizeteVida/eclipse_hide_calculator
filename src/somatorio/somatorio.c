@@ -10,7 +10,7 @@ typedef struct
 
 typedef double (*SomatorioPointer)(double, double);
 
-ValorSomatorio _pegarValores()
+static ValorSomatorio pegarValores()
 {
     ValorSomatorio valorSomatorio;
 
@@ -22,31 +22,31 @@ ValorSomatorio _pegarValores()
 
     if (valorSomatorio.n < valorSomatorio.m)
     {
-        printf("Voc? n?o pode digitar o valor final sendo menor que o inicial, os valores ser?o zerados !!!\n");
+        printf("Você não pode digitar o valor final sendo menor que o inicial, os valores serão zerados !!!\n");
         valorSomatorio.m = 0;
         valorSomatorio.n = 0;
     }
     return valorSomatorio;
 }
 
-long double _processaSomatorio(SomatorioPointer somatorio)
+static long double processaSomatorio(SomatorioPointer somatorio)
 {
-    ValorSomatorio valor = _pegarValores();
+    ValorSomatorio valor = pegarValores();
     return somatorio(valor.m, valor.n);
 }
 
-void _processarResultado(double resultado, int qualSomatorio)
+static void processarResultado(double resultado, int qualSomatorio)
 {
     printf("O resultado do somatório %d foi de %.50lf\n\n", qualSomatorio, resultado);
 }
 
-long double _factorial(double num)
+static long double factorial(double num)
 {
     if (num == 0)
     {
         return 1;
     }
-    return num * _factorial(num - 1);
+    return num * factorial(num - 1);
 }
 
 void showSomatorioSubmenu()
@@ -62,7 +62,8 @@ void showSomatorioSubmenu()
 
     do
     {
-        printf("\tSOMATÓRIO\n1.\tSomatório de j até m para a regra j\n2.\tSomatório de j = m até n para a regra (-j)^(j+1)\n3.\tSomatório de j = 0 até n para a regra 1/j!\n4.\tSomatório de j = 0 até n para a regra 8 / ( ( 4j + 1 ) * ( 4j + 3 ) )\n5.\tSair do Somatório\n\n");
+    	system("cls");
+        printf("\tSomatório\n\n1.\tSomatório de j até m para a regra j\n2.\tSomatório de j = m até n para a regra (-j)^(j+1)\n3.\tSomatório de j = 0 até n para a regra 1/j!\n4.\tSomatório de j = 0 até n para a regra 8 / ( ( 4j + 1 ) * ( 4j + 3 ) )\n\n5.\tSair do Somatório\n\n");
         scanf("%d", &opc);
 
         switch (opc)
@@ -71,7 +72,7 @@ void showSomatorioSubmenu()
         case 2:
         case 3:
         case 4:
-            _processarResultado(_processaSomatorio(somatoriosPointers[opc - 1]), opc);
+            processarResultado(processaSomatorio(somatoriosPointers[opc - 1]), opc);
             break;
         }
     } while (opc != 5);
@@ -99,9 +100,9 @@ double somatorio3(double m, double n)
 {
     if (m == n)
     {
-        return 1 / _factorial(m);
+        return 1 / factorial(m);
     }
-    return 1 / _factorial(m) + somatorio3(m + 1, n);
+    return 1 / factorial(m) + somatorio3(m + 1, n);
 }
 
 double somatorio4(double m, double n)

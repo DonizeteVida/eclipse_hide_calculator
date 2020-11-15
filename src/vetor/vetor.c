@@ -73,7 +73,7 @@ void showVetorSubmenu()
     do
     {
         system("cls");
-        printf("\tVETOR\n1. Ordenar de forma crescente\n2. Ordenar de forma decrescente\n3. VOLTAR AO MENU PRINCIPAL\n");
+        printf("\tVetor\n\n1.\tOrdenar de forma crescente\n2.\tOrdenar de forma decrescente\n\n3.\tVoltar ao menu principal\n");
         scanf("%d", &opc);
 
         Validador *validadores[] = {maior, menor};

@@ -119,7 +119,8 @@ void showMatrizesSubmenu()
 
     do
     {
-        printf("MATRIZES\n1. Determinante\n2. Soma\n3. Subtracao\n4. Produto\n5. Voltar ao menu anterior\n");
+    	system("cls");
+        printf("\nMatrizes\n\n1.\tDeterminante\n2.\tSoma\n3.\tSubtracao\n4.\tProduto\n\n5.\tVoltar ao menu anterior\n");
         scanf("%d", &opc);
 
         switch (opc)

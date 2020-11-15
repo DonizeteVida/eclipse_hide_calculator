@@ -5,10 +5,10 @@
 #define PI 3.1415
 
 /*1*/ float constK(float _number);
-/*2*/ float x(float _number);
-/*3*/ float k(float _number);
+/*2*/ float x(float, float);
+/*3*/ float k(float, float);
 /*4*/ float e(float _number);
-/*5*/ float logbn(float _number);
+/*5*/ float logbn(float, float);
 /*6*/ float ln(float _number);
 /*7*/ float half(float _number);
 /*8*/ float fsin(float _number);

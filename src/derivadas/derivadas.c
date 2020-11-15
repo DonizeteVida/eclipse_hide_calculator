@@ -15,7 +15,7 @@ void equacaoDaReta(float x, float a, LimFun f)
     // b = y - a.x
     float b = y - a * x;
 
-    printf("A equaç?o da reta neste ponto é de y = %.2f.x + %.2f\n", a, b);
+    printf("A equação da reta neste ponto é de y = %.2f.x + %.2f\n", a, b);
 }
 
 void showDerivadasSubmenu()
@@ -37,7 +37,7 @@ void showDerivadasSubmenu()
     do
     {
         system("cls");
-        printf("\tAplicaç?o em derivadas\n1.\tf(x) = k\n2.\tf(x) = x^k\n3.\tf(x) = k^x\n4.\tf(x) = e^x\n5.\tf(x) = log k(x)\n6.\tf(x) = ln(x)\n7.\tf(x) = 1/x\n8.\tf(x) = sen(x)\n9.\tf(x) = cos(x)\n10.\tf(x) = tan(x)\n11.\tVOLTAR AO MENU PRINCIPAL\n\n");
+        printf("\tAplicação em derivadas\n\n1.\tf(x) = k\n2.\tf(x) = x^k\n3.\tf(x) = k^x\n4.\tf(x) = e^x\n5.\tf(x) = log k(x)\n6.\tf(x) = ln(x)\n7.\tf(x) = 1/x\n8.\tf(x) = sen(x)\n9.\tf(x) = cos(x)\n10.\tf(x) = tan(x)\n\n11.\tVoltar ao menu principal\n\n");
         scanf("%d", &opc);
 
         switch (opc)

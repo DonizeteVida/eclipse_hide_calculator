@@ -43,7 +43,8 @@ void showLogicaProposicionalSubmenu()
     int opc = 0;
     do
     {
-        printf("Logica proposicional\n1.\t~p\n2.\t~q\n3.\tp AND q\n4.\tp OR q\n5.\tp XOR q\n6.\tp -> q\n7.\tp <-> q\n8.\tVoltar ao menu anterior.\n\n");
+    	system("cls");
+        printf("\tLogica proposicional\n\n1.\t~p\n2.\t~q\n3.\tp AND q\n4.\tp OR q\n5.\tp XOR q\n6.\tp -> q\n7.\tp <-> q\n\n8.\tVoltar ao menu anterior.\n\n");
         scanf("%d", &opc);
 
         switch (opc)

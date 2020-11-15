@@ -29,7 +29,6 @@ int main(int argc, char const *argv[]) {
 
 	do {
 		system("cls");
-		printf("Mini calculadora discreta\n");
 
 		if (wrongOption) {
 			wrongOption = 0;
@@ -37,13 +36,13 @@ int main(int argc, char const *argv[]) {
 		}
 
 		printf(
-				"\t\tMENU\n1.\tSomatório\n2.\tLógica proposicional\n3.\tMatrizes\n4.\tAnálise combinatória\n5.\tOrdenar Elementos do Vetor\n6.\tAplicação em função\n7.\tAplicação em derivadas\n8.\tSair\n\n");
+				"\tMENU\n\n1.\tSomatório\n2.\tLógica proposicional\n3.\tMatrizes\n4.\tAnálise combinatória\n5.\tOrdenar Elementos do Vetor\n6.\tAplicação em função\n7.\tAplicação em derivadas\n\n8.\tSair\n\n");
 		scanf("%d", &opc);
 
 		Submenu submenus[] = { showSomatorioSubmenu,
 				showLogicaProposicionalSubmenu, showMatrizesSubmenu,
 				showAnaliseCombinatoriaSubmenu, showVetorSubmenu,
-				showFuncoesSubmenu, showDerivadasSubmenu, };
+				showFuncoesSubmenu, showDerivadasSubmenu };
 
 		switch (opc) {
 		case 1:

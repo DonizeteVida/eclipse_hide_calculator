@@ -11,7 +11,8 @@ void showAnaliseCombinatoriaSubmenu()
     double m, n, j, o, a, b, c, d;
     do
     {
-        printf("\nAn√°lise combinat√≥ria \n1. Fatorial \n2. Permuta√ß√£o simples \n3. Permuta√ß√£o com repeti√ß√£o \n4. Arranjo simples \n5. Arranjo com repeti√ß√£o \n6. Combina√ß√£o simples \n7. Combina√ß√£o com repeti√ß√£o\nOp√ß√£o desejada: ");
+    	system("cls");
+        printf("\tAn·lise combinatÛria\n\n1.\tFatorial \n2.\tPermutaÁ„o simples\n3.\tPermutaÁ„o com repetiÁ„o\n4.\tArranjo simples\n5.\tArranjo com repetiÁ„o\n6.\tCombinaÁ„o simples\n7.\tCombinaÁ„o com repetiÁ„o\n\nOpÁ„o desejada: ");
         scanf("%d", &opc);
 
         switch (opc)
@@ -24,7 +25,7 @@ void showAnaliseCombinatoriaSubmenu()
             {
                 m *= n;
             }
-            printf("\nO fatorial de %.0lf √© igual a: %.0lf ", a, m);
+            printf("\nO fatorial de %.0lf È igual a: %.0lf ", a, m);
             break;
         case 2:
             printf("\nDigite o valor: ");
@@ -34,7 +35,7 @@ void showAnaliseCombinatoriaSubmenu()
             {
                 m *= n;
             }
-            printf("\nA permuta√ß√£o simples de %.0lf √© igual a: %.0lf ", a, m);
+            printf("\nA PermutaÁ„o simples de %.0lf È igual a: %.0lf ", a, m);
             break;
         case 3:
             printf("\nDigite o valor para o total de elementos: ");
@@ -46,7 +47,7 @@ void showAnaliseCombinatoriaSubmenu()
             {
                 m *= j;
             }
-            printf("\nA permuta√ß√£o com repeti√ß√£o de %.0lf elementos e %0.lf que se repetem √© igual a: %.0lf ", a, n, m);
+            printf("\nA PermutaÁ„o com repetiÁ„o de %.0lf elementos e %0.lf que se repetem È igual a: %.0lf ", a, n, m);
             break;
         case 4:
             printf("\nDigite o valor para o total de elementos: ");
@@ -62,7 +63,7 @@ void showAnaliseCombinatoriaSubmenu()
             {
                 m *= j;
             }
-            printf("\nO arranjo simples de  %.0lf elementos e %0.lf agrupamentos √© igual a: %.0lf ", a, n, m);
+            printf("\nO arranjo simples de  %.0lf elementos e %0.lf agrupamentos È igual a: %.0lf ", a, n, m);
             break;
         case 5:
             printf("\nDigite o valor para o total de elementos: ");
@@ -75,7 +76,7 @@ void showAnaliseCombinatoriaSubmenu()
             {
                 m *= a;
             }
-            printf("\nO arranjo com repeti√ß√£o de  %.0lf elementos e %0.lf elementos que se repetem √© igual a: %.0lf ", a, j, m);
+            printf("\nO arranjo com repetiÁ„o de  %.0lf elementos e %0.lf elementos que se repetem È igual a: %.0lf ", a, j, m);
             break;
         case 6:
             printf("\nDigite o valor para o total de elementos: ");
@@ -98,7 +99,7 @@ void showAnaliseCombinatoriaSubmenu()
                 d *= c;
             }
             m = m / d;
-            printf("\nA combin√ß√£o simples de  %.0lf elementos e %0.lf agrupamentos √© igual a: %.0lf ", a, b, m);
+            printf("\nA combinaÁ„o simples de  %.0lf elementos e %0.lf agrupamentos È igual a: %.0lf ", a, b, m);
             break;
         case 7:
             printf("\nDigite o valor para o total de elementos: ");
@@ -122,18 +123,18 @@ void showAnaliseCombinatoriaSubmenu()
                 d *= c;
             }
             m = m / d;
-            printf("\nA combin√ß√£o com repeti√ß√£o de  %.0lf elementos e %0.lf agrupamentos que se repetem √© igual a: %.0lf ", a, b, m);
+            printf("\nA combinaÁ„o com repetiÁ„o de  %.0lf elementos e %0.lf agrupamentos que se repetem È igual a: %.0lf ", a, b, m);
             break;
         default:
             break;
         }
         if (opc <= 7 && opc != 0)
         {
-            printf("\nDeseja continuar utilizando a an√°lise combinat√≥ria?\n1.Sim\n2.N√£o\nOp√ß√£o desejada: ");
+            printf("\nDeseja continuar utilizando a An·lise combinatÛria?\n1.Sim\n2.N„o\nOpÁ„o desejada: ");
             scanf("%d", &opc);
             if (opc != 1)
             {
-                printf("\nSaindo de an√°lise combinat√≥ria !\n");
+                printf("\nSaindo de An·lise combinatÛria !\n");
                 sleep(2);
                 system("cls");
                 break;
@@ -153,7 +154,7 @@ void showAnaliseCombinatoriaSubmenu()
         }
         else
         {
-            printf("\nOp√ß√£o inv√°lida, por favor, tente novamente !\n");
+            printf("\nOpÁ„o inv·lida, por favor, tente novamente !\n");
             sleep(2);
             opc = 1;
             system("cls");
