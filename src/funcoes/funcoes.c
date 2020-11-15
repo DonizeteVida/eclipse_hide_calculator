@@ -3,39 +3,40 @@
 #include <stdlib.h>
 #include "funcoes.h"
 
-static float get(const char *const phrase) {
+float get(const char *const phrase) {
 	fflush(stdin);
 	float f;
-	printf("%s", phrase);
+	printf("Digite o valor de %s: ", phrase);
 	scanf("%f", &f);
+	fflush(stdin);
 	return f;
 }
 
-static float getConst() {
-	return get("Digite o valor de K: ");
+float getConst() {
+	return get("K");
 }
 
-static float getFloat() {
-	return get("Digite o valor de X: ");
+float getFloat() {
+	return get("X");
 }
 
-/*1*/float constK(float number) {
-	return getConst();
+/*1*/float constK(float xNumber, float kNumber) {
+	return kNumber;
 }
 
-/*2*/float x(float xNumber, float kNumber) {
+/*2*/float xPow(float xNumber, float kNumber) {
 	return powf(xNumber, kNumber);
 }
 
-/*3*/float k(float kNumber, float xNumber) {
+/*3*/float kPow(float xNumber, float kNumber) {
 	return powf(kNumber, xNumber);
 }
 
-/*4*/float e(float expo) {
+/*4*/float ePow(float expo) {
 	return powf(E, expo);
 }
 
-/*5*/float logbn(float kFloat, float xFloat) {
+/*5*/float logbn(float xFloat, float kFloat) {
 	return log10(xFloat) / log10(kFloat);
 }
 
@@ -59,7 +60,7 @@ static float getFloat() {
 	return tanf(number / 180.0 * PI);
 }
 
-void mostrarValor(float valor) {
+static void mostrarValor(float valor) {
 	fflush(stdin);
 	system("cls");
 	printf("O valor foi de %.2f\n\n", valor);
@@ -78,32 +79,35 @@ void showFuncoesSubmenu() {
 
 		switch (opc) {
 		case 1: {
-			mostrarValor(constK(getFloat()));
+			float xFloat = getFloat();
+			float kFloat = getConst();
+
+			mostrarValor(constK(xFloat, kFloat));
 			break;
 		}
 		case 2: {
 			float xFloat = getFloat();
 			float kFloat = getConst();
 
-			mostrarValor(x(xFloat, kFloat));
+			mostrarValor(xPow(xFloat, kFloat));
 			break;
 		}
 		case 3: {
 			float kFloat = getConst();
 			float xFloat = getFloat();
 
-			mostrarValor(k(kFloat, xFloat));
+			mostrarValor(kPow(xFloat, kFloat));
 			break;
 		}
 		case 4: {
-			mostrarValor(e(getFloat()));
+			mostrarValor(ePow(getFloat()));
 			break;
 		}
 		case 5: {
 			float kFloat = getConst();
 			float xFloat = getFloat();
 
-			mostrarValor(logbn(kFloat, xFloat));
+			mostrarValor(logbn(xFloat, kFloat));
 			break;
 		}
 		case 6: {
