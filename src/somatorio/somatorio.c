@@ -3,10 +3,12 @@
 #include <math.h>
 #include "somatorio.h"
 
-typedef struct
-{
-    double m, n;
-} ValorSomatorio;
+#define pair(type, name) \
+{\
+	type m, n;\
+} name;
+
+typedef struct pair(double, ValorSomatorio)
 
 typedef double (*SomatorioPointer)(double, double);
 
@@ -38,6 +40,8 @@ static long double processaSomatorio(SomatorioPointer somatorio)
 static void processarResultado(double resultado, int qualSomatorio)
 {
     printf("O resultado do somatório %d foi de %.50lf\n\n", qualSomatorio, resultado);
+    fflush(stdin);
+    getchar();
 }
 
 static long double factorial(double num)

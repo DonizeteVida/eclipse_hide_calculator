@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99332aa2-1c20-4a11-8f9d-24f63171e37e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.settings/language.settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/language.settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debug/eclipse_hide_calculator.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/eclipse_hide_calculator.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debug/src/somatorio/somatorio.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/src/somatorio/somatorio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/somatorio/somatorio.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/somatorio/somatorio.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kNxON4CRBa7meIZsi1IwQnIzmZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99332aa2-1c20-4a11-8f9d-24f63171e37e" name="Default Changelist" comment="" />
+      <created>1605554818227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605554818227</updated>
+      <workItem from="1605554820003" duration="59000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="994" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605554840439">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="994" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1040@0.0.2560.1040" timestamp="1605554840439" />
+    <state x="1060" y="275" key="FileChooserDialogImpl" timestamp="1605554865683">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1060" y="275" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1605554865683" />
+  </component>
+</project>

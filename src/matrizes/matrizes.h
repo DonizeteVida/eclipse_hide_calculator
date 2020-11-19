@@ -1,11 +1,13 @@
 #ifndef _MATRIZES_H
 #define _MATRIZES_H
 
+#define MAX 3
+
 void showMatrizesSubmenu();
 
-void calcularDeterminante(int **, int, int);
-void soma(int **, int **, int, int);
-void subtracao(int **, int **, int, int);
-void produto(int **, int **, int, int);
+void calcularDeterminante(int **);
+void soma(int **, int **);
+void subtracao(int **, int **);
+void produto(int **, int **);
 
 #endif

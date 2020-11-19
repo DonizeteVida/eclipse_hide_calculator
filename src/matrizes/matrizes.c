@@ -2,40 +2,43 @@
 #include <stdlib.h>
 #include "matrizes.h"
 
-void _desalocarMatriz(int **matriz, int r, int c)
+void _desalocarMatriz(int **matriz)
 {
 }
 
-void _mostrarMatriz(int **matriz, int r, int c)
+void _mostrarMatriz(int **matriz)
 {
-    for (int lr = 0; lr < r; lr++)
+    for (int lr = 0; lr < MAX; lr++)
     {
-        for (int lc = 0; lc < c; lc++)
+        for (int lc = 0; lc < MAX; lc++)
         {
             printf("%d ", matriz[lr][lc]);
         }
         printf("\n");
     }
     printf("\n");
+
+
+    getchar();
 }
 
-int **_alocarMatriz(int r, int c)
+int **_alocarMatriz()
 {
-    int **alocado = malloc(r * sizeof(int *));
-    for (int i = 0; i < c; i++)
+    int **alocado = malloc(MAX * sizeof(int *));
+    for (int i = 0; i < MAX; i++)
     {
-        alocado[i] = malloc(c * sizeof(int));
+        alocado[i] = malloc(MAX * sizeof(int));
     }
     return alocado;
 }
 
-int **_construirMatriz(int r, int c)
+int **_construirMatriz()
 {
-    int **matriz = _alocarMatriz(r, c);
+    int **matriz = _alocarMatriz();
 
-    for (int i = 0; i < r; i++)
+    for (int i = 0; i < MAX; i++)
     {
-        for (int j = 0; j < c; j++)
+        for (int j = 0; j < MAX; j++)
         {
             printf("Digite o valor da celula %d %d: ", i + 1, j + 1);
 
@@ -43,21 +46,21 @@ int **_construirMatriz(int r, int c)
         }
     }
     printf("\n");
-    _mostrarMatriz(matriz, r, c);
+    _mostrarMatriz(matriz);
     return matriz;
 }
 
-void calcularDeterminante(int **matriz, int r, int c)
+void calcularDeterminante(int **matriz)
 {
     int dp = 1;
     int ds = 1;
 
-    for (int lr = 0, lc = 0; lr < r && lc < c; lr++, lc++)
+    for (int lr = 0, lc = 0; lr < MAX && lc < MAX; lr++, lc++)
     {
         dp *= matriz[lr][lc];
     }
 
-    for (int lr = 0, lc = c - 1; lr < r && lc >= 0; lr++, lc--)
+    for (int lr = 0, lc = MAX - 1; lr < MAX && lc >= 0; lr++, lc--)
     {
         ds *= matriz[lr][lc];
     }
@@ -65,92 +68,91 @@ void calcularDeterminante(int **matriz, int r, int c)
     printf("Diagonal principal: %d e diagonal segundaria: %d\n", dp, ds);
     printf("O determinante e de %d.\n\n", dp - ds);
 
-    _desalocarMatriz(matriz, r, c);
+    getchar();
+
+    _desalocarMatriz(matriz);
 }
 
-void soma(int **matriz1, int **matriz2, int r, int c)
+void soma(int **matriz1, int **matriz2)
 {
-    int **matrizSoma = _alocarMatriz(r, c);
+    int **matrizSoma = _alocarMatriz();
 
-    for (int lr = 0; lr < r; lr++)
+    for (int lr = 0; lr < MAX; lr++)
     {
-        for (int lc = 0; lc < c; lc++)
+        for (int lc = 0; lc < MAX; lc++)
         {
             matrizSoma[lr][lc] = matriz1[lr][lc] + matriz2[lr][lc];
         }
     }
 
     printf("O resultado da matriz e: \n");
-    _mostrarMatriz(matrizSoma, r, c);
+    _mostrarMatriz(matrizSoma);
 
-    _desalocarMatriz(matriz1, r, c);
-    _desalocarMatriz(matriz2, r, c);
-    _desalocarMatriz(matrizSoma, r, c);
+    _desalocarMatriz(matriz1);
+    _desalocarMatriz(matriz2);
+    _desalocarMatriz(matrizSoma);
 }
-void subtracao(int **matriz1, int **matriz2, int r, int c)
+void subtracao(int **matriz1, int **matriz2)
 {
-    int **matrizSubtracao = _alocarMatriz(r, c);
+    int **matrizSubtracao = _alocarMatriz();
 
-    for (int lr = 0; lr < r; lr++)
+    for (int lr = 0; lr < MAX; lr++)
     {
-        for (int lc = 0; lc < c; lc++)
+        for (int lc = 0; lc < MAX; lc++)
         {
             matrizSubtracao[lr][lc] = matriz1[lr][lc] - matriz2[lr][lc];
         }
     }
 
     printf("O resultado da matriz e: \n");
-    _mostrarMatriz(matrizSubtracao, r, c);
+    _mostrarMatriz(matrizSubtracao);
 
-    _desalocarMatriz(matriz1, r, c);
-    _desalocarMatriz(matriz2, r, c);
-    _desalocarMatriz(matrizSubtracao, r, c);
+    _desalocarMatriz(matriz1);
+    _desalocarMatriz(matriz2);
+    _desalocarMatriz(matrizSubtracao);
 }
-void produto(int **matriz1, int **matriz2, int r, int c)
+void produto(int **matriz1, int **matriz2)
 {
-    _mostrarMatriz(matriz1, r, c);
-    _mostrarMatriz(matriz2, r, c);
+    _mostrarMatriz(matriz1);
+    _mostrarMatriz(matriz2);
 }
 
 void showMatrizesSubmenu()
 {
     int opc;
-    int r = 2, c = 2;
 
     do
     {
     	system("cls");
-        printf("\nMatrizes\n\n1.\tDeterminante\n2.\tSoma\n3.\tSubtracao\n4.\tProduto\n\n5.\tVoltar ao menu anterior\n");
+        printf("\tMatrizes\n\n1.\tDeterminante\n2.\tSoma\n3.\tSubtracao\n4.\tProduto\n\n5.\tVoltar ao menu anterior\n");
         scanf("%d", &opc);
 
         switch (opc)
         {
         case 1:
-            calcularDeterminante(_construirMatriz(r, c), r, c);
+            calcularDeterminante(_construirMatriz());
             break;
         case 2:
         {
-            int **matriz1 = _construirMatriz(r, c);
-            int **matriz2 = _construirMatriz(r, c);
-            soma(matriz1, matriz2, r, c);
+            int **matriz1 = _construirMatriz();
+            int **matriz2 = _construirMatriz();
+            soma(matriz1, matriz2);
             break;
         }
         case 3:
         {
-            int **matriz1 = _construirMatriz(r, c);
-            int **matriz2 = _construirMatriz(r, c);
-            subtracao(matriz1, matriz2, r, c);
+            int **matriz1 = _construirMatriz();
+            int **matriz2 = _construirMatriz();
+            subtracao(matriz1, matriz2);
             break;
         }
         case 4:
         {
-            int **matriz1 = _construirMatriz(r, c);
-            int **matriz2 = _construirMatriz(r, c);
-            produto(matriz1, matriz2, r, c);
+            int **matriz1 = _construirMatriz();
+            int **matriz2 = _construirMatriz();
+            produto(matriz1, matriz2);
             break;
         }
-        case 5:
-            break;
         default:
             break;
         }
