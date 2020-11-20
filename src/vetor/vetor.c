@@ -28,6 +28,7 @@ int *preencheVetor(int *p)
         printf("Escreva o valor da posição %d: ", i + 1);
         scanf("%d", p + i);
     }
+    fflush(stdin);
     return p;
 }
 
@@ -63,6 +64,7 @@ void mostrarVetor(int *v)
         printf("%d ", *(v + vetor));
     }
     printf("\n");
+    getchar();
     free(v);
     v = 0;
 }

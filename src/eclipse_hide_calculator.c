@@ -30,13 +30,20 @@ int main(int argc, char const *argv[]) {
 	do {
 		system("cls");
 
+		printf("-----------------------");
+
+		printf("\n\n\tCALC MAX\n\n");
+
+		printf("-----------------------");
+
+
 		if (wrongOption) {
 			wrongOption = 0;
-			printf("Nenhuma opção selecionada, tente novamente\n");
+			printf("\n\nNenhuma opção selecionada, tente novamente\n");
 		}
 
 		printf(
-				"\tMENU\n\n1.\tSomatório\n2.\tLógica proposicional\n3.\tMatrizes\n4.\tAnálise combinatória\n5.\tOrdenar Elementos do Vetor\n6.\tAplicação em função\n7.\tAplicação em derivadas\n\n8.\tSair\n\n");
+				"\n\n\tMENU\n\n1.\tSomatório\n2.\tLógica proposicional\n3.\tMatrizes\n4.\tAnálise combinatória\n5.\tOrdenar Elementos do Vetor\n6.\tAplicação em função\n7.\tAplicação em derivadas\n\n8.\tSair\n\n");
 		scanf("%d", &opc);
 
 		Submenu submenus[] = { showSomatorioSubmenu,
